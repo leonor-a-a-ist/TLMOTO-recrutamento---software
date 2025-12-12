@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-black text-black dark:text-white p-8">
-      <h1 className="text-4xl font-bold mb-6">Welcome to TLMOTO</h1>
+      <h1 className="text-4xl font-bold mb-6">Recrutamento Software</h1>
 
       <Image
         src="/next.svg"

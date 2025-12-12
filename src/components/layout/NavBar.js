@@ -1,17 +1,31 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
+  const router = useRouter();
+
   return (
-    <nav className="flex justify-between items-center p-4 bg-gray-200 dark:bg-gray-800">
-      <div className="font-bold text-xl">TLMOTO</div>
-      <div className="flex gap-4">
-        <Link href="/" className="hover:underline">
-          Home
+    <nav className="bg-gray-900 text-white flex items-center justify-between px-6 py-4">
+      <div>
+      {router.pathname !== '/' && (
+        <Link href="/">
+          <img
+            src="/images/home/home.png"
+            alt="Home Logo"
+            className="h-10 w-10 cursor-pointer"
+          />
         </Link>
-        <Link href="/about-us" className="hover:underline">
-          About Us
-        </Link>
-      </div>
+      )}
+        </div>
+
+        <div>
+          <Link
+            href="/about_us"
+            className={router.pathname === '/about_us' ? 'font-bold underline' : ''}
+          >
+            ABOUT US
+          </Link>
+        </div>
     </nav>
   );
 }
