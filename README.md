@@ -3,7 +3,8 @@
 - no TL usam file-based routing; como não tenho preferência pq nem sabia o que era, estou a usar tmb
 - portanto, tudo o que está na diretoria pages fica automaticamente disponivel como route, e cada diretoria dentro de pages tem apenas um index.js (ainda não ha nada implementado)
 
-
-adicionar gitignore??
-
-teste teste
+to do:
+- adicionar gitignore??
+- eliminar/ mudar os ficheiros .ts (typescript) para javascript
+- responsivo (obrigatório para entrega final)
+- centralizar o título (np meu pc não se nota, mas não está centralizado)
