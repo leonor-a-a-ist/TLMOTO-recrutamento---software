@@ -1,13 +1,14 @@
 import { useRouter } from 'next/router';
+import Menu from '@/components/about_us/Menu'; // caminho relativo para o ficheiro
 
-export default function PersonalPage({ name, content, active }) {
+export default function PersonalPage({ name, content, active, src }) {
     const router = useRouter();
 
     return (
         <div className="min-h-screen bg-neutral-900 text-white flex flex-col items-center gap-30 pt-40">
 
             {/* TO DO: botão selecionado tem cor diferente */}
-            <div className="mt-32 flex w-full justify-center gap-12">
+{/*             <div className="mt-32 flex w-full justify-center gap-12">
 
                 <div className="flex flex-col items-center">
                     <button onClick={() => router.push('/maria')}
@@ -22,7 +23,11 @@ export default function PersonalPage({ name, content, active }) {
                         Leonor Azevedo
                     </button>
                 </div>
-            </div>
+            </div> */}
+
+            <Menu />
+
+
 
             {/* Conteúdo principal */}
             <div className="flex flex-col  items-center gap-4">
@@ -39,7 +44,7 @@ export default function PersonalPage({ name, content, active }) {
                         {/* Imagem */}
                         <div className="flex-shrink-0">
                             <img
-                                src="/stickfigure.jpg"
+                                src={ src }
                                 alt={name}
                                 className="w-64 h-auto rounded-xl bg-white p-6"
                             />

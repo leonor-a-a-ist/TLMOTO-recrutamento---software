@@ -20,17 +20,25 @@
 //--------------------------------------------------------------
 // Global styles
 //--------------------------------------------------------------
+
+// Aplica-se a TODOS os elementos
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    //font-family: "Poppins", sans-serif;
 }
 
+// Dentro do body define: cor de fundo, cor do texto, fonte e centralização de conteúdo
 body {
+    justify-content: center;
+    align-items: center;
+
     background: var(--background);
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 
+    // Sem scrollbar
     &::-webkit-scrollbar {
         display: none;
     }
@@ -41,22 +49,77 @@ body {
 }
 
 .btn {
-  padding: 0.75rem 1.75rem;
-  border-radius: 0.75rem;
-  font-weight: 600;
-  background-color: #374151;
-  color: white;
-  transition: all 0.2s ease;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    background-color: #374151;
+    color: white;
+    transition: all 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #4b5563;
+    background-color: #4b5563;
 }
 
 .btn-active {
-  background-color: #3b82f6; // azul
+    background-color: #3b82f6; // azul
 }
 
 .btn-inactive {
-  background-color: #374151;
+    background-color: #374151;
 }
+
+p {
+    line-height: 2;
+    font-family: Helvetica;
+}
+
+.menu {
+    position: relative;
+    width: 524px;
+    height: 59px;
+    background: 0#222;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.menu a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 23px;
+}
+
+.menu span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95px;
+    height: 100%;
+    background: linear-gradient(45deg, #317094, #2a54a3);
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.menu a:nth-child(1):hover~span {
+    left: 0;
+}
+
+.menu a:nth-child(2):hover~span {
+    left: 95px;
+}
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */

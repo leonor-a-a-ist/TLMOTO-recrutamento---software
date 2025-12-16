@@ -4,12 +4,14 @@
 - portanto, tudo o que está na diretoria pages fica automaticamente disponivel como route, e cada diretoria dentro de pages tem apenas um index.js (ainda não ha nada implementado)
 
 to do:
-- adicionar gitignore??
 - eliminar/ mudar os ficheiros .ts (typescript) para javascript
 - responsivo (obrigatório para entrega final!!)
-- centralizar o título (no meu pc não se nota, mas não está centralizado)
-- pqq é tudo "export default function"??
+- centralizar o título (no pc não se nota, mas não está centralizado)
 
 
+* RECURSOS *
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button
+
+* menu para navegar entre as páginas pessoais:
+    https://www.youtube.com/watch?v=EXzotQV4tDM

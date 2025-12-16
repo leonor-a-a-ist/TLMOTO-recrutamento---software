@@ -36,16 +36,17 @@ export default function Home() {
                         showCursor={true}
                         cursorCharacter="|"
                         //className="text-7xl font-sans text-white"
-                        className={`${bungee.className} text-7xl text-white `}
-                    //style={{ fontFamily: "Science Gothic, sans-serif" }}
-                    //style={{ fontFamily: "Stack Sans Notch, sans-serif" }}
+                        className={`${bungee.className} text-6xl text-white `}
+                        //style={{ fontFamily: "Science Gothic, sans-serif" }}
+                        //style={{ fontFamily: "Stack Sans Notch, sans-serif" }}
                     />
 
                     <p className="mt-6 text-center max-w-md">
-                        This is the homepage. Use the navbar above to navigate to About Us.
+                        Estás na Homepage :) <br/>
+                        Vem conhecer as recrutas!
                     </p>
                 </div>
-                
+
 
                 <DottedButton />
 
