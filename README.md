@@ -6,5 +6,10 @@
 to do:
 - adicionar gitignore??
 - eliminar/ mudar os ficheiros .ts (typescript) para javascript
-- responsivo (obrigatório para entrega final)
-- centralizar o título (np meu pc não se nota, mas não está centralizado)
+- responsivo (obrigatório para entrega final!!)
+- centralizar o título (no meu pc não se nota, mas não está centralizado)
+- pqq é tudo "export default function"??
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button
