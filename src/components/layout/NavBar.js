@@ -6,9 +6,12 @@ export default function Navbar() {
     const router = useRouter();
     const path = router.pathname;
 
-    return (
-        <nav className="bg-black text-white flex items-center justify-between px-12 py-12">
+    if (path === '/') return null;
 
+    return (
+        <nav className="bg-neutral-900">
+
+            {/* Lado esquerdo */}
             <div>
                 {path !== '/' && (
                     <Link href="/">
@@ -17,14 +20,15 @@ export default function Navbar() {
                 )}
             </div>
 
+            {/* Lado direito */}
             <div>
                 {path !== '/' && (
-                <Link
-                    href="/about_us"
-                    className={path === '/about_us' ? 'font-bold underline' : ''}
-                >
-                    ABOUT US
-                </Link>
+                    <Link
+                        href="/about_us"
+                        className={path === '/about_us' ? 'font-bold underline' : ''}
+                    >
+                        ABOUT US
+                    </Link>
                 )}
             </div>
 

@@ -15,7 +15,7 @@ export default function Maria() {
             name="Maria Cordeiro"
             content={mariaContent}
             active="maria"
-            src = "/stickfigure.jpg"
+            src = "/maria.jpg"
         />
     );
 }   

@@ -13,6 +13,16 @@ const bungee = Bungee({
 export default function Home() {
     return (
         <div className="flex min-h-screen">
+
+            {/* Imagem no canto superior direito */}
+            <Image
+                src="/logo.png" // substitui pelo caminho da tua imagem
+                alt="Logo"
+                width={80}
+                height={80}
+                className="absolute top-4 right-4 object-contain"
+            />
+
             {/* Coluna esquerda: imagem */}
             <div className="relative">
                 <Image
@@ -26,7 +36,7 @@ export default function Home() {
             </div>
 
             {/* Coluna direita: fundo preto, ocupa o restante */}
-            <div className="flex-1 bg-neutral-900 text-white flex flex-col justify-center items-center gap-15 p-8">
+            <div className="homepage bg-neutral-900 flex-1">
                 <div className="flex flex-col items-center justify-center">
                     {/* escolher tipo de letra mais tarde :) */}
                     <TextType
@@ -37,13 +47,12 @@ export default function Home() {
                         cursorCharacter="|"
                         //className="text-7xl font-sans text-white"
                         className={`${bungee.className} text-6xl text-white `}
-                        //style={{ fontFamily: "Science Gothic, sans-serif" }}
-                        //style={{ fontFamily: "Stack Sans Notch, sans-serif" }}
+                    //style={{ fontFamily: "Science Gothic, sans-serif" }}
+                    //style={{ fontFamily: "Stack Sans Notch, sans-serif" }}
                     />
 
-                    <p className="mt-6 text-center max-w-md">
-                        Estás na Homepage :) <br/>
-                        Vem conhecer as recrutas!
+                    <p className="bg-neutral-900">
+                        Estás na Homepage. Vem conhecer as recrutas!
                     </p>
                 </div>
 

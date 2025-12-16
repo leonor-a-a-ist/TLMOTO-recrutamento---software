@@ -1,12 +1,15 @@
-// app/components/Menu.js
-export default function Menu() {
+import { useRouter } from 'next/router';
+
+
+const Menu = () => {
+    const router = useRouter();
     return (
-        <body>
-            <nav className="menu">
-                <a href="/maria"> Maria Cordeiro</a>
-                <a href="/leonor"> Leonor Azevedo</a>
-                <span> </span>
-            </nav>
-        </body>
-    )
-}
+        <nav className="menu">
+            <a href="/maria" className={router.pathname === '/maria' ? 'active' : ''}>Maria Cordeiro</a>
+            <a href="/leonor" className={router.pathname === '/leonor' ? 'active' : ''}>Leonor Azevedo</a>
+            <span> </span>
+        </nav>
+    );
+};
+
+export default Menu;

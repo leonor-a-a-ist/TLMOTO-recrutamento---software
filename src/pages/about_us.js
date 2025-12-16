@@ -14,7 +14,7 @@ export default function AboutUs() {
                 <Link href="/maria">
                     <div className="flex flex-col items-center">
                         <img
-                            src="/stickfigure.jpg"
+                            src="/maria.jpg"
                             alt="Maria"
                             className="w-48 h-auto rounded-lg hover:opacity-80 transition"
                         />

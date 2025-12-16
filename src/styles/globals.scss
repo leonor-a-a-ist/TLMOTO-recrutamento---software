@@ -1,42 +1,18 @@
 @import "tailwindcss";
 
-//--------------------------------------------------------------
-// Variables
-//--------------------------------------------------------------
-:root {
-    --background: #ffffff;
-    --foreground: #1bc19d;
-
-    scroll-behavior: smooth;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #000000;
-        --foreground: #ffffff;
-    }
-}
-
-//--------------------------------------------------------------
-// Global styles
-//--------------------------------------------------------------
-
 // Aplica-se a TODOS os elementos
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    //font-family: "Poppins", sans-serif;
 }
 
 // Dentro do body define: cor de fundo, cor do texto, fonte e centralização de conteúdo
 body {
     justify-content: center;
     align-items: center;
-
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    color: white;
 
     // Sem scrollbar
     &::-webkit-scrollbar {
@@ -44,10 +20,63 @@ body {
     }
 }
 
+.homepage {
+    display: flex;
+    /* flex */
+    min-height: 100vh;
+    /* min-h-screen */
+    //background-color: #111827;   /* bg-neutral-900 */
+    color: #ffffff;
+    /* text-white */
+
+    flex-direction: column;
+    /* flex-col */
+    justify-content: center;
+    /* justify-center */
+    align-items: center;
+    /* items-center */
+
+    gap: 3.75rem;
+    /* gap-15 (Tailwind usa rem: gap-4 = 1rem, gap-15 ≈ 3.75rem) */
+    padding: 2rem;
+    /* p-8 = 2rem */
+}
+
+
+
+nav {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.personal-page {
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 40px;
+}
+
+// afeta elementos com id main (not sure what that means), mas adiciona-lhes espaço no topo
 #main {
     margin-top: 90px;
 }
 
+// Define o estilo dos botões
 .btn {
     padding: 0.75rem 1.75rem;
     border-radius: 0.75rem;
@@ -69,57 +98,65 @@ body {
     background-color: #374151;
 }
 
+// Define o estilo dos parágrafos, especificamente para a homepage (os restantes não estão afetados)
 p {
-    line-height: 2;
-    font-family: Helvetica;
+    line-height: 1.5;
+    margin-top: 0px;
+    text-align: center;
 }
 
+// Define o estilo do menu; usado no componente Menu.jsx para as páginas pessoais
 .menu {
     position: relative;
-    width: 524px;
+    width: 300px;
     height: 59px;
-    background: 0#222;
+    background-color: #222;
     border-radius: 8px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    z-index: 1;
+    overflow: hidden;
+    margin-top: 40px;
 }
 
 .menu a {
     position: relative;
+    z-index: 1;
+    //flex: 1;
+    text-align: center;
     display: inline-block;
     font-size: 1em;
     font-weight: 500;
     color: #fff;
     text-decoration: none;
-    padding: 0 23px;
+    padding: 0px;
 }
 
 .menu span {
     position: absolute;
     top: 0;
     left: 0;
-    width: 95px;
+    width: 50%;
     height: 100%;
     background: linear-gradient(45deg, #317094, #2a54a3);
     border-radius: 8px;
     transition: .5s;
 }
 
-.menu a:nth-child(1):hover~span {
+.menu a.active~span {
     left: 0;
+    /* se o primeiro link estiver ativo */
+}
+
+.menu a:nth-child(2).active~span {
+    left: 50%;
+    /* se o segundo link estiver ativo */
+}
+
+.menu a:nth-child(1):hover~span {
+    left: 0%;
 }
 
 .menu a:nth-child(2):hover~span {
-    left: 95px;
+    left: 50%;
 }
-
-
-
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-} */
