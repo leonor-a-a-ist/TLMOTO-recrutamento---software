@@ -36,7 +36,7 @@ export default function Home() {
             </div>
 
             {/* Coluna direita: fundo preto, ocupa o restante */}
-            <div className="homepage bg-neutral-900 flex-1">
+            <div className="homepage bg-black flex-1">
                 <div className="flex flex-col items-center justify-center">
                     {/* escolher tipo de letra mais tarde :) */}
                     <TextType
@@ -51,7 +51,7 @@ export default function Home() {
                     //style={{ fontFamily: "Stack Sans Notch, sans-serif" }}
                     />
 
-                    <p className="bg-neutral-900">
+                    <p className="bg-black">
                         Estás na Homepage. Vem conhecer as recrutas!
                     </p>
                 </div>
