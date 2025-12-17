@@ -1,10 +1,3 @@
-
-to do:
-- eliminar/ mudar os ficheiros .ts (typescript) para javascript
-- responsivo (obrigatório para entrega final!!)
-- centralizar o título (no pc não se nota, mas não está centralizado)
-
-
 # RECURSOS
 
 * file-based routing:
