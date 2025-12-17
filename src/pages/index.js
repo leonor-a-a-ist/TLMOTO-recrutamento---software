@@ -47,15 +47,14 @@ export default function Home() {
                         cursorCharacter="|"
                         //className="text-7xl font-sans text-white"
                         className={`${bungee.className} text-6xl text-white `}
-                    //style={{ fontFamily: "Science Gothic, sans-serif" }}
-                    //style={{ fontFamily: "Stack Sans Notch, sans-serif" }}
+                        //style={{ fontFamily: "Science Gothic, sans-serif" }}
+                        //style={{ fontFamily: "Stack Sans Notch, sans-serif" }}
                     />
 
-                    <p className="bg-neutral-900">
+                    <p className="special bg-neutral-900">
                         Estás na Homepage. Vem conhecer as recrutas!
                     </p>
                 </div>
-
 
                 <DottedButton />
 

@@ -1,7 +1,3 @@
-"The Pages Router has a file-system based router built on concepts of pages. When a file is added to the pages directory it's automatically available as a route. Learn more about routing in the Pages Router:"
-
-- no TL usam file-based routing; como não tenho preferência pq nem sabia o que era, estou a usar tmb
-- portanto, tudo o que está na diretoria pages fica automaticamente disponivel como route, e cada diretoria dentro de pages tem apenas um index.js (ainda não ha nada implementado)
 
 to do:
 - eliminar/ mudar os ficheiros .ts (typescript) para javascript
@@ -9,9 +5,17 @@ to do:
 - centralizar o título (no pc não se nota, mas não está centralizado)
 
 
-* RECURSOS *
+# RECURSOS
 
-https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button
+* file-based routing:
+    https://arnab-k.medium.com/understanding-the-file-based-routing-in-next-js-785cbd38613b
+
+* elementos HTML:
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements
+
+* trabalhar com scss:
+    https://nextjs.org/docs/app/getting-started/css
 
 * menu para navegar entre as páginas pessoais:
     https://www.youtube.com/watch?v=EXzotQV4tDM
+
