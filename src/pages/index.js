@@ -51,11 +51,7 @@ export default function Home() {
                         //style={{ fontFamily: "Stack Sans Notch, sans-serif" }}
                     />
 
-<<<<<<< HEAD
                     <p className="bg-black">
-=======
-                    <p className="special bg-neutral-900">
->>>>>>> 4c65ed206ebd18b899c7d4fe98c4eff53dfdde0c
                         Estás na Homepage. Vem conhecer as recrutas!
                     </p>
                 </div>
