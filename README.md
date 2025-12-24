@@ -12,3 +12,8 @@
 * menu para navegar entre as páginas pessoais:
     https://www.youtube.com/watch?v=EXzotQV4tDM
 
+* website respondivo:
+    https://www.youtube.com/watch?v=l04dDYW-QaI
+    
+* posicionamento:
+    https://www.youtube.com/watch?v=YEmdHbQBCSQ

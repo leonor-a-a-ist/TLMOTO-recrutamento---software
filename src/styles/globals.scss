@@ -22,6 +22,8 @@ body {
     background: black;
     color: white;
 
+    //@include disposition(null, null, center);
+
     // Sem scrollbar
     &::-webkit-scrollbar {
         display: none;
@@ -32,6 +34,9 @@ body {
 .homepage {
     color: #ffffff;
     @include disposition(column, 10px, center);
+
+    //mobile: imagem no fundo com o resto do centeúdo por cima
+    //desktop: imagem à esquerda conteúdo à direita
 }
 
 // define o estilo da barra de navegação
@@ -51,12 +56,54 @@ nav {
     @include disposition(column, 40px, null);
 }
 
+// define o estilo do layout das páginas pessoais
+.personal-card {
+    background-color: #222;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    width: 95%;
+    max-width: 900px;
+    display: flex;
+    padding: 1rem;
+    @include disposition(column, 3rem, center);
+
+    @media (min-width: 768px) {
+        flex-direction: row; // desktop
+    }
+
+    &__img {
+        width: 15rem;
+        height: auto;
+        border-radius: 1rem;
+        object-fit: cover;
+
+        @media (min-width: 768px) {
+            width: 30rem;
+        }
+    }
+
+    &__content {
+        width: 100%;
+    }
+}
+
+
+//pagina about us
+
+
+
+
 // define o estilo dos títulos h1
 h1 {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
     margin-top: 40px;
+
+    &.about_us{
+        font-size: 2.5rem; 
+        font-weight: 700; 
+    }
 }
 
 // afeta elementos com id main (not sure what that means), mas adiciona-lhes espaço no topo
@@ -70,7 +117,7 @@ p {
     margin-bottom: 5px;
 
     &.homepageP {
-      text-align: center;
+        text-align: center;
     }
 }
 
@@ -87,7 +134,7 @@ p {
 
     a {
         position: relative;
-        z-index: 1;
+        z-index: 1;     //define a posição do elemento em relação aos restantes: à frente ou atrás deles (negativo fica atrás)
         text-align: center;
         display: inline-block;
         font-size: 1em;
@@ -126,25 +173,3 @@ p {
     }
 }
 
-
-// Define o estilo dos botões
-/* .btn {
-    padding: 0.75rem 1.75rem;
-    border-radius: 0.75rem;
-    font-weight: 600;
-    background-color: #374151;
-    color: white;
-    transition: all 0.2s ease;
-
-    &:hover {
-        background-color: #4b5563;
-    }
-
-    &-active {
-        background-color: #3b82f6;
-    }
-
-    &-inactive {
-        background-color: #374151;
-    }
-} */

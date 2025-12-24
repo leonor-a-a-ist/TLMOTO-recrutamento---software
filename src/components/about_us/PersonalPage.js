@@ -9,7 +9,7 @@ export default function PersonalPage({ name, content, active, src }) {
         {/* <div className="min-h-screen bg-neutral-900 text-white flex flex-col items-center gap-20 pt-40"> */}
 
             {/* Navegação entre páginas */}
-            <Menu className=" flex-1 mt-20" />
+            <Menu className="flex-1 mt-20" />
 
             {/* Conteúdo principal */}
             <div className="flex flex-col items-center gap-4">
@@ -21,24 +21,24 @@ export default function PersonalPage({ name, content, active, src }) {
                     </h1>
                 </div>
 
-                <div className="bg-[#222] rounded-2xl shadow-lg p-10 w-[900px]">
-                    <div className="flex items-center gap-16">
+                <div className="bg-[#222] personal-card">
+                    {/*<div className="flex items-center gap-16"> */}
 
                         {/* Imagem */}
-                        <div className="flex-shrink-0">
+                        <div className="personal-card__image">
                             <img
                                 src={src}
                                 alt={name}
-                                className="w-64 h-auto rounded-xl bg-white p-6"
+                                className="personal-card__img"
                             />
                         </div>
 
                         {/* Informação pessoal */}
-                        <div className>
+                        <div className = "personal-card__content">
                             {content}
                         </div>
 
-                    </div>
+                    {/*</div>*/}
                 </div>
             </div>
         </div>

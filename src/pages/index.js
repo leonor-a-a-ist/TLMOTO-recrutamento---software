@@ -12,7 +12,7 @@ const bungee = Bungee({
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen">
+        <div className="min-h-screen flex flex-col md:flex-row relative">
 
             {/* Imagem no canto superior direito */}
             <Image
@@ -24,7 +24,7 @@ export default function Home() {
             />
 
             {/* Coluna esquerda: imagem */}
-            <div className="relative">
+            <div className="w-full md:w-[40%] relative h-[50vh] md:h-auto">
                 <Image
                     src="/homescreencut.jpg"
                     alt="home screen image"
@@ -37,6 +37,7 @@ export default function Home() {
 
             {/* Coluna direita: fundo preto, ocupa o restante */}
             <div className="homepage bg-black flex-1">
+                
                 <div className="flex flex-col items-center justify-center">
                     {/* escolher tipo de letra mais tarde :) */}
                     <TextType
