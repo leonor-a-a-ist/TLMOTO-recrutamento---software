@@ -19,7 +19,6 @@ export default function Maria() {
         <PersonalPage
             name="Maria Cordeiro"
             content={mariaContent}
-            active="maria"
             src = "/maria.jpg"
         />
     );

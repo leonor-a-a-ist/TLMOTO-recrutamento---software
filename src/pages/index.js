@@ -1,8 +1,6 @@
 import Image from "next/image";
 import TextType from "@/components/TextType";
 import DottedButton from "@/components/DottedButton";
-import "@fontsource/science-gothic";
-import "@fontsource/stack-sans-notch";
 import { Bungee } from "next/font/google";
 
 const bungee = Bungee({
@@ -16,7 +14,7 @@ export default function Home() {
 
             {/* Imagem no canto superior direito */}
             <Image
-                src="/logo.png" // substitui pelo caminho da tua imagem
+                src="/logo.png"
                 alt="Logo"
                 width={80}
                 height={80}
@@ -24,7 +22,7 @@ export default function Home() {
             />
 
             {/* Coluna esquerda: imagem */}
-            <div className="w-full md:w-[40%] relative h-[50vh] md:h-auto">
+            <div className="homepage_image.container">
                 <Image
                     src="/homescreencut.jpg"
                     alt="home screen image"
@@ -36,20 +34,16 @@ export default function Home() {
             </div>
 
             {/* Coluna direita: fundo preto, ocupa o restante */}
-            <div className="homepage bg-black flex-1">
-                
+            <div className="homepage flex-1">
+
                 <div className="flex flex-col items-center justify-center">
-                    {/* escolher tipo de letra mais tarde :) */}
                     <TextType
                         text={["Recrutamento Software"]}
                         typingSpeed={75}
                         pauseDuration={5000}
                         showCursor={true}
                         cursorCharacter="|"
-                        //className="text-7xl font-sans text-white"
                         className={`${bungee.className} text-6xl text-white `}
-                        //style={{ fontFamily: "Science Gothic, sans-serif" }}
-                        //style={{ fontFamily: "Stack Sans Notch, sans-serif" }}
                     />
 
                     <p className="bg-black">

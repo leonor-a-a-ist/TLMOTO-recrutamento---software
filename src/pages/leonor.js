@@ -17,7 +17,6 @@ export default function Leonor() {
         <PersonalPage
             name="Leonor Azevedo"
             content={leonorContent}
-            active="leonor"
             src="/leonor.jpg"
         />
     );
