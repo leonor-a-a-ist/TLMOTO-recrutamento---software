@@ -1,29 +1,31 @@
+// Páginas pessoais
 
-// define o estilo das páginas pessoais
 .personal-page {
     min-height: 100vh;
     background-color: $background-color;
     @include generic; //o espaço entre os h1 e os restantes elementos vem de margin-top e margin-bottom
     color: white;
 
+    // Conteúdo principal da página
     &_content {
         @include generic;
         color: white;
 
-        // define o estilo do layout das páginas pessoais
-        // usamos rem para ser consistente entre todas as páginas, e não depender das suas definições "pessoais"
+        // Card que contém imagem e informações pessoais
         &_card {
             background-color: $secondary-color;
             border-radius: 1rem;
             box-shadow: 0 10px 25px #00000066;
             width: 95%;
-            max-width: 900px; // mesmo tentanto ocupar 95%, nunca pode ser maior que 900px (para não ficar enorme em desktop)
+            max-width: 900px; // mesmo tentanto ocupar 95%, nunca pode ser maior que 900px 
             padding: 1rem;
             @include generic($gap: 3rem);
             color: white;
+            margin-bottom: 2rem;
 
+            // Em desktop temos uma disposição diferente
             @media (min-width: $main-changing-point) {
-                flex-direction: row; // desktop
+                flex-direction: row; 
             }
 
             img {
@@ -32,16 +34,16 @@
                 border-radius: 1rem;
                 object-fit: cover;
 
-                // desktop
+                // Aumenta tamanho da imagem no desktop
                 @media (min-width: $main-changing-point) {
                     width: 25rem;
                 }
             }
 
+            // Texto do card (informações pessoais)
             &_text {
                 width: 100%;
             }
         }
     }
 }
-

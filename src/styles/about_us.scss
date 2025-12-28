@@ -1,48 +1,45 @@
+// Página about_us
 
-//pagina about us
 .about_us {
-    //aqui precisamos de um espaço maior depois do título
     @include generic;
     color: white;
-
     min-height: 100vh;
     background-color: $background-color; // bg-neutral-900
 
+    // Estilo das imagens
     img {
-        width: 12rem; // w-48
-        height: auto; // h-auto
-        border-radius: 1rem; // rounded-lg
+        width: 12rem;
+        height: auto;
+        border-radius: 1rem;
         transition: all 150ms ease-in-out;
 
+        // Efeito hover
         &:hover {
             opacity: 0.8;
         }
     }
 
+    // Espaçamento do título principal
     h1 {
-        // espaçamento entre título e imagens
         margin-bottom: 5rem;
     }
 
+    // Conjunto das imagens
     &_container {
         // as imagens estão uma por coluna
         @include generic($justify: center);
         color: white;
 
-        //width: 80%;
-        //max-width: 900px; // max-w-6xl
-
+        // Estilo para os Links
         a {
             @include generic($justify: center);
             color: white;
-
             margin-bottom: 3rem;
         }
 
+        // Estilo para desktop (layout em linha)
         @media (min-width: $main-changing-point) {
-            // as imagens estão uma por linha (desktop)
             @include generic($direction: row, $gap: 7rem);
-            color: white;
         }
     }
 }

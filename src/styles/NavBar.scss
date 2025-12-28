@@ -1,5 +1,5 @@
+// NavBar
 
-// define o estilo da barra de navegação
 nav {
     padding: 12px;
     @include generic($direction: row, $justify: space-between);

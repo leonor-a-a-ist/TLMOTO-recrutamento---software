@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
-$background-color: #171717; // bg-neutral-900
-$secondary-color: #222; //cor de fundo do botão e do card
-$main-changing-point: 768px;
+// Variáveis globais
+$background-color: #171717; // cor de fundo principal (bg-neutral-900)
+$secondary-color: #222;     // cor de fundo do menu e cards
+$main-changing-point: 768px;  // ponto de mudança principal
 
+// Mixin genérico para layouts
 @mixin generic($display: flex, $direction: column, $gap: 0, $justify: null) {
     display: $display;
     align-items: center;
@@ -12,25 +14,25 @@ $main-changing-point: 768px;
     justify-content: $justify;
 }
 
-// Aplica-se a TODOS os elementos
+// Reset global de todos os elementos
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-// Dentro do body define: cor de fundo, cor do texto, fonte e centralização de conteúdo
+// Estilo base do body
 body {
     background: $background-color;
     @include generic(null, null, 0, center);
 
-    // Sem scrollbar
+    // Remove scrollbar
     &::-webkit-scrollbar {
         display: none;
     }
 }
 
-// define o estilo dos títulos h1
+// Estilo padrão dos títulos h1
 h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -38,19 +40,14 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-// define o estilo dos parágrafos
+// Estilo padrão dos parágrafos
 p {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-// afeta elementos com id main (not sure what that means), mas adiciona-lhes espaço no topo
-#main {
-    margin-top: 90px;
-}
-
 // Importar todos os outros ficheiros parciais
-@import './about_us.scss';
-@import './home_page.scss';
-@import './NavBar.scss';
-@import './personal_page.scss';
+@import "./about_us.scss";
+@import "./home_page.scss";
+@import "./NavBar.scss";
+@import "./personal_page.scss";

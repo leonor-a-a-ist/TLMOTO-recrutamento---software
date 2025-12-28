@@ -9,9 +9,9 @@ export default function AboutUs() {
                 Recrutas
             </h1>
 
-            {/* Container das imagens */}
+            {/* Conjunto das imagens */}
             <div className="about_us_container">
-                {/* Esquerda */}
+
                 <Link href="/maria">
                     <img
                         src="/maria.jpg"
@@ -20,7 +20,6 @@ export default function AboutUs() {
                     <span>Maria Cordeiro</span>
                 </Link>
 
-                {/* Direita */}
                 <Link href='/leonor'>
                     <img
                         src="/leonor.jpg"
@@ -28,6 +27,7 @@ export default function AboutUs() {
                     />
                     <span>Leonor Azevedo</span>
                 </Link>
+
             </div>
         </div>
     );

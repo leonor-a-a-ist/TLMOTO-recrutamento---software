@@ -3,6 +3,7 @@ import TextType from "@/components/TextType";
 import DottedButton from "@/components/DottedButton";
 import { Bungee } from "next/font/google";
 
+// Tipo de letra a usar para o título
 const bungee = Bungee({
     subsets: ["latin"],
     weight: ["400"],
@@ -12,6 +13,7 @@ export default function Home() {
     return (
         <div className="homepage">
 
+            {/* Logo no canto superior direito */}
             <div className="logo">
                 <Image
                     src="/logo.png"
@@ -43,7 +45,7 @@ export default function Home() {
 
                 <div className="text-container">
 
-                    {/* Título com TypeWriter - Responsivo */}
+                    {/* Título */}
                     <TextType
                         text={["Recrutamento Software"]}
                         typingSpeed={75}
@@ -53,14 +55,14 @@ export default function Home() {
                         className={`${bungee.className} title`}
                     />
 
-                    {/* Subtítulo - Responsivo */}
+                    {/* Texto */}
                     <p className="subtitle">
                         Estás na Homepage. Vem conhecer as recrutas!
                     </p>
                 </div>
 
                 {/* Botão */}
-                <div className="button-container">
+                <div>
                     <DottedButton />
                 </div>
 

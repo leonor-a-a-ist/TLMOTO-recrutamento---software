@@ -1,5 +1,4 @@
-import Menu from '@/components/about_us/Menu'; // caminho relativo para o ficheiro
-
+import Menu from '@/components/about_us/Menu'; // Botão usado para navegação entre páginas
 
 export default function PersonalPage({ name, content, src }) {
 
@@ -33,7 +32,7 @@ export default function PersonalPage({ name, content, src }) {
 
                 </div>
             </div>
-            
+
         </div>
     );
 }

@@ -1,20 +1,20 @@
-// define o estilo da homepage
+// Homepage
 
-//devido ao layout da homepage, esta tem mais pontos de mudança do que as restantes páginas
+// Esta página tem mais pontos de mudança devido à sua estrutura
 $large-changing-point: 1024px;
 $small-changing-point: 640px;
 
 .homepage {
     background-color: black;
+    color: white;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     justify-content: center;
-    color: white;
+    gap: 10px;
     min-height: 100vh;
 
+    // Em desktop temos uma disposição diferente
     @media (min-width: $large-changing-point) {
-        // para ecrãs maiores, a imagem não ocupa o fundo
         flex-direction: row;
     }
 
@@ -22,13 +22,14 @@ $small-changing-point: 640px;
         text-align: center;
     }
 
+    // Logo no canto superior direito
     .logo {
         position: absolute;
         top: 1rem;
         right: 1rem;
         z-index: 20;
 
-        // ecrãs pequenos
+        // Tamanho da logo para ecrãs pequenos
         width: 4rem;
         height: 2rem;
 
@@ -37,66 +38,24 @@ $small-changing-point: 640px;
         }
 
         @media (min-width: $main-changing-point) {
-            //ecrãs médios
+            // Tamanho da logo para ecrãs médios
             width: 5rem;
             height: 2.5rem;
         }
         @media (min-width: $large-changing-point) {
-            // ecrãs grandes
+            // Tamanho da logo para ecrãs grandes
             width: 6rem;
             height: 3rem;
         }
     }
 
-    .mobile-background {
-        position: fixed;
-        inset: 0; // top, bottom, left e right todos a 0
-        z-index: 0;
-
-        img {
-            // em mobile, a imagem de fundo é escurecida e ocupa todo o ecrã
-            object-fit: cover;
-            filter: brightness(20%);
-        }
-
-        @media (min-width: $large-changing-point) {
-            // para ecrãs maiores, a imagem não ocupa o fundo
-            display: none;
-        }
-    }
-
-    .left-image {
-        display: none; // por default não aparece (fazemos mobile como default, por ser mais restritivo)
-
-        @media (min-width: $large-changing-point) {
-            // desktop
-            display: block;
-            width: 40%;
-            height: 100vh;
-            position: relative;
-
-            img {
-                object-fit: cover;
-                filter: brightness(90%);
-            }
-        }
-    }
-
-    .right-content {
-        z-index: 20;
-        @include generic($justify: center, $gap:3rem);
-
-        @media (min-width: 1024px) {
-            width: 60%;
-            background-color: transparent;
-        }
-    }
-
+    // Conjunto do texto
     .text-container {
         text-align: center;
-        max-width: 95%;
+        max-width: 90%;
         color: white;
 
+        // Título principal
         .title {
             color: white;
             line-height: 1.2;
@@ -113,6 +72,7 @@ $small-changing-point: 640px;
             }
         }
 
+        // Texto
         .subtitle {
             margin-top: 0.5rem;
             font-size: 1rem;
@@ -127,9 +87,52 @@ $small-changing-point: 640px;
                 font-size: 1.5rem;
             }
         }
+    }
 
-        .button-container {
-            padding-top: 1rem;
+    // Imagem de fundo para ecrãs menores
+    .mobile-background {
+        position: fixed;
+        inset: 0; // top, bottom, left e right todos a 0
+        z-index: 0;
+
+        img {
+            object-fit: cover;
+            filter: brightness(20%); // escurece a imagem para melhor contraste
+        }
+
+        @media (min-width: $large-changing-point) {
+            // Esconde imagem de fundo no desktop
+            display: none;
+        }
+    }
+
+    // =========== Desktop ===========
+    // Imagem à esquerda
+    .left-image {
+        display: none; // default: escondido em mobile
+
+        @media (min-width: $large-changing-point) {
+            // desktop
+            display: block;
+            width: 40%;
+            height: 100vh;
+            position: relative;
+
+            img {
+                object-fit: cover;
+                filter: brightness(90%);
+            }
+        }
+    }
+
+    // Restante do conteúdo à direita
+    .right-content {
+        z-index: 20;
+        @include generic($justify: center, $gap: 3rem);
+
+        @media (min-width: 1024px) {
+            width: 60%;
+            background-color: transparent;
         }
     }
 }
