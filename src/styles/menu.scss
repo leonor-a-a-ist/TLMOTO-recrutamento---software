@@ -1,0 +1,52 @@
+// Define o estilo do menu; usado no componente Menu.jsx para as páginas pessoais
+.menu {
+    position: relative;
+    width: 350px;
+    height: 59px;
+    max-width: 95%;
+    background-color: $secondary-color;
+    border-radius: 8px;
+    overflow: hidden;
+    @include generic($direction: null, $justify: space-around);
+    color: white;
+
+    a {
+        position: relative;
+        z-index: 1; //define a posição do elemento em relação aos restantes: à frente ou atrás deles (negativo fica atrás)
+        text-align: center;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(45deg, #317094, #2a54a3);
+        border-radius: 8px;
+        transition: 0.5s;
+    }
+
+    a.active ~ span {
+        left: 0;
+        /* se o primeiro link estiver ativo */
+    }
+
+    a:nth-child(2).active ~ span {
+        left: 50%;
+        /* se o segundo link estiver ativo */
+    }
+
+    a:nth-child(1):hover ~ span {
+        left: 0%;
+    }
+
+    a:nth-child(2):hover ~ span {
+        left: 50%;
+    }
+}

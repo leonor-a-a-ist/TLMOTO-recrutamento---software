@@ -1,5 +1,6 @@
 import Menu from '@/components/about_us/Menu'; // caminho relativo para o ficheiro
 
+
 export default function PersonalPage({ name, content, src }) {
 
     return (
@@ -32,6 +33,7 @@ export default function PersonalPage({ name, content, src }) {
 
                 </div>
             </div>
+            
         </div>
     );
 }

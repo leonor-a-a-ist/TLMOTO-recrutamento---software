@@ -1,0 +1,17 @@
+
+// define o estilo da homepage
+.homepage {
+    background-color: black;
+    @include generic($gap: 10px, $justify: center);
+    color: white;
+
+    p {
+        text-align: center;
+    }
+
+    /*@media (min-width: $changing-point) {
+    } */
+
+    //mobile: imagem no fundo com o resto do conteúdo por cima??
+    //desktop: imagem à esquerda (a ocupar a altura completamente, sem scroll possível), conteúdo à direita
+}

@@ -1,0 +1,9 @@
+
+// define o estilo da barra de navegação
+nav {
+    padding: 12px;
+    @include generic($direction: row, $justify: space-between);
+    color: white;
+    background-color: $background-color;
+    margin-bottom: 3rem;
+}
