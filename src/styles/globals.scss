@@ -2,7 +2,7 @@
 
 $background-color: #171717; // bg-neutral-900
 $secondary-color: #222; //cor de fundo do botão e do card
-$changing-point: 768px;
+$main-changing-point: 768px;
 
 @mixin generic($display: flex, $direction: column, $gap: 0, $justify: null) {
     display: $display;
@@ -52,6 +52,5 @@ p {
 // Importar todos os outros ficheiros parciais
 @import './about_us.scss';
 @import './home_page.scss';
-@import './menu.scss';
 @import './NavBar.scss';
 @import './personal_page.scss';

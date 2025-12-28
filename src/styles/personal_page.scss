@@ -22,7 +22,7 @@
             @include generic($gap: 3rem);
             color: white;
 
-            @media (min-width: $changing-point) {
+            @media (min-width: $main-changing-point) {
                 flex-direction: row; // desktop
             }
 
@@ -33,7 +33,7 @@
                 object-fit: cover;
 
                 // desktop
-                @media (min-width: $changing-point) {
+                @media (min-width: $main-changing-point) {
                     width: 25rem;
                 }
             }

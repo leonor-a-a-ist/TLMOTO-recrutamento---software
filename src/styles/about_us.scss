@@ -39,7 +39,7 @@
             margin-bottom: 3rem;
         }
 
-        @media (min-width: $changing-point) {
+        @media (min-width: $main-changing-point) {
             // as imagens estão uma por linha (desktop)
             @include generic($direction: row, $gap: 7rem);
             color: white;
